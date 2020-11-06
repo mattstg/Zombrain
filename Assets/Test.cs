@@ -5,6 +5,8 @@ using UnityEngine;
 public class Test : MonoBehaviour
 {
     /*
+     * 
+     * Guy Demers
 
     Bug/Balance Fixes
     //Fix the following issues in the game
