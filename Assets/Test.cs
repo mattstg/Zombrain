@@ -10,11 +10,11 @@ public class Test : MonoBehaviour
 
     Bug/Balance Fixes
     //Fix the following issues in the game
-    1) The walls are invisible, make them visible again
-    2) Everything is shoved outside the screen when the game starts, fix that issue.
+    1) The walls are invisible, make them visible again - FIXED
+    2) Everything is shoved outside the screen when the game starts, fix that issue. - FIXED
     3) Bullets do not seem to affect zombies
     4) The code that stops zombies and humans from spawning in walls seems to be bugged
-    5) Set number of humans to spawn to 100
+    5) Set number of humans to spawn to 100 - FIXED
    
 
     Research

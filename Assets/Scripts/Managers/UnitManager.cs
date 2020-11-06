@@ -30,7 +30,7 @@ public class UnitManager
     Transform zombieParent;
     Transform humanParent;
 
-    int numberOfHumansToSpawn = 85;
+    int numberOfHumansToSpawn = 100;
     int numberOfZombiesToSpawn = 5;
 
     float percentInfected = .2f;  //this could scale with level or something
