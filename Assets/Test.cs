@@ -6,6 +6,8 @@ public class Test : MonoBehaviour
 {
     /*
 
+    Guillaume Pelletier
+
     Bug/Balance Fixes
     //Fix the following issues in the game
     1) The walls are invisible, make them visible again
