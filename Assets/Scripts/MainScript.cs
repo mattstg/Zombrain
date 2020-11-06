@@ -24,7 +24,7 @@ public class MainScript : MonoBehaviour
     public void Start()
     {
         PlayerManager.Instance.GameStart();
-        UnitManager.Instance.GameStart();        
+        UnitManager.Instance.GameStart();
     }
 
     public void Update()

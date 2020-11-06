@@ -41,8 +41,7 @@ public class Player : Human
     }
 
     void Fire()
-    {
-        
+    {        
         if (ammo == AMMO_MAX)
             timeNextAmmoRecharge = Time.time + AMMO_RECHARGE_RATE;
         if(ammo > 0)
@@ -53,4 +52,6 @@ public class Player : Human
             ammo--;
         }
     }
+
+
 }

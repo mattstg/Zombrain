@@ -10,14 +10,14 @@ public class Test : MonoBehaviour
 
     Bug/Balance Fixes
     //Fix the following issues in the game
-    1) The walls are invisible, make them visible again - FIXED
-    2) Everything is shoved outside the screen when the game starts, fix that issue. - FIXED
-    3) Bullets do not seem to affect zombies - FIXED
-    4) The code that stops zombies and humans from spawning in walls seems to be bugged - FIXED
-    5) Set number of humans to spawn to 100 - FIXED
+    1) [FIXED] The walls are invisible, make them visible again
+    2) [FIXED] Everything is shoved outside the screen when the game starts, fix that issue.
+    3) [FIXED] Bullets do not seem to affect zombies
+    4) [FIXED] The code that stops zombies and humans from spawning in walls seems to be bugged
+    5) [FIXED] Set number of humans to spawn to 100
     
-    - Player was missing its "PlayerWalkRight" - FIXED
-    - Incorrectly named Zombie WalkSouth animation (was named WalkUp) - FIXED
+    - [FIXED] Player was missing its "PlayerWalkRight"
+    - [FIXED] Incorrectly named Zombie WalkSouth animation (was named WalkUp)
 
     Research
     //Awnser the following questions with enough detail to explain to someone who hasn't seen the game or code yet
@@ -51,7 +51,7 @@ public class Test : MonoBehaviour
     
     New Features
     -Make A HUD that shows the amount of ammo by showing pictures of ammo in a Horizontal layout group
-    -Make the HUD showcase the number of humans and zombies as text
+    - [ADDED] Make the HUD showcase the number of humans and zombies as text
 
 
 
