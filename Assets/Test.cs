@@ -17,7 +17,7 @@ public class Test : MonoBehaviour
     5) Set number of humans to spawn to 100 - FIXED
     
     - Player was missing its "PlayerWalkRight" - FIXED
-    - Incorrectly named Zombie WalkSouth animation (was named WalkUp) - FIXED   
+    - Incorrectly named Zombie WalkSouth animation (was named WalkUp) - FIXED
 
     Research
     //Awnser the following questions with enough detail to explain to someone who hasn't seen the game or code yet

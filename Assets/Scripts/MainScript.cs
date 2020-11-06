@@ -15,21 +15,23 @@ public class MainScript : MonoBehaviour
     public void Awake()
     {
         instance = this;
-        PlayerManager.Instance.Initialize(); 
+        PlayerManager.Instance.Initialize();
         UnitManager.Instance.Initialize();
+        UIManager.Instance.Initialize();
         wallColliders.geometryType = CompositeCollider2D.GeometryType.Outlines; //starts as poly for cast reasons
     }
 
     public void Start()
     {
         PlayerManager.Instance.GameStart();
-        UnitManager.Instance.GameStart();
+        UnitManager.Instance.GameStart();        
     }
 
     public void Update()
     {
         PlayerManager.Instance.Update();
         UnitManager.Instance.Update();
+        UIManager.Instance.Update();
     }
 
     public void FixedUpdate()
