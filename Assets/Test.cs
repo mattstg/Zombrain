@@ -12,8 +12,8 @@ public class Test : MonoBehaviour
     //Fix the following issues in the game
     1) The walls are invisible, make them visible again - FIXED
     2) Everything is shoved outside the screen when the game starts, fix that issue. - FIXED
-    3) Bullets do not seem to affect zombies
-    4) The code that stops zombies and humans from spawning in walls seems to be bugged
+    3) Bullets do not seem to affect zombies - FIXED
+    4) The code that stops zombies and humans from spawning in walls seems to be bugged - FIXED
     5) Set number of humans to spawn to 100 - FIXED
    
 
