@@ -114,7 +114,7 @@ public class UnitManager
         {
             Vector2 spotInMap = new Vector2(Random.Range(-wbounds.extents.x, wbounds.extents.x), Random.Range(-wbounds.extents.y, wbounds.extents.y)) + (Vector2)wbounds.center;
 
-            if (!Physics2D.OverlapCapsule(spotInMap, new Vector2(2, 2), CapsuleDirection2D.Vertical, 0, LayerMask.GetMask("Unit","Ground")))
+            if (!Physics2D.OverlapCapsule(spotInMap, new Vector2(2, 2), CapsuleDirection2D.Vertical, 0, LayerMask.GetMask("Unit")))
             {
                 validSpot = spotInMap;
                 return true;
