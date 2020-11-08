@@ -19,7 +19,7 @@ public class UnitManager
     }
     #endregion
 
-    const int VALIDSPOT_ATTEMPTS_MAX = 40; 
+    const int VALIDSPOT_ATTEMPTS_MAX = 40;
 
     public List<Zombie> zombies;
     public List<Human> humans;
@@ -47,8 +47,8 @@ public class UnitManager
     public void GameStart()
     {
         Vector2 validSpot = new Vector2();
-        for(int i = 0; i < numberOfHumansToSpawn; i++)
-            if(GetValidSpot(out validSpot))
+        for (int i = 0; i < numberOfHumansToSpawn; i++)
+            if (GetValidSpot(out validSpot))
                 SpawnHuman(validSpot);
         for (int i = 0; i < numberOfZombiesToSpawn; i++)
             if (GetValidSpot(out validSpot))
@@ -108,7 +108,7 @@ public class UnitManager
     private bool GetValidSpot(out Vector2 validSpot)
     {
         Bounds wbounds = MainScript.instance.worldBounds.bounds;
-        
+
 
         for (int i = 0; i < VALIDSPOT_ATTEMPTS_MAX; i++)
         {
@@ -134,10 +134,10 @@ public class UnitManager
         if (includePlayer)
             humansToCheck.AddRange(PlayerManager.Instance.players);
 
-        foreach(Human h in humansToCheck)
+        foreach (Human h in humansToCheck)
         {
             distance = Vector2.SqrMagnitude((Vector2)h.transform.position - pt);
-            if(distance < closestDistance)
+            if (distance < closestDistance)
             {
                 closestDistance = distance;
                 closestHuman = h;
