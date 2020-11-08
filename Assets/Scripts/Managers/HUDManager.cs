@@ -35,9 +35,9 @@ public class HUDManager
     {
         HumanText = GameObject.Find("HumanText").GetComponent<Text>();
         ZombieText = GameObject.Find("ZombieText").GetComponent<Text>();
-        ammoObject = GameObject.Find("AmmoObject");
-        ammoPanel = GameObject.Find("AmmoPanel").GetComponent<HorizontalLayoutGroup>();
 
+        ammoObject = Resources.Load<GameObject>("Prefabs/AmmoObject");
+        ammoPanel = GameObject.Find("AmmoPanel").GetComponent<HorizontalLayoutGroup>();
         ammoList = new List<GameObject>();
 
         for (int i = 0; i < Player.AMMO_MAX; i++)
