@@ -6,7 +6,7 @@ public class Player : Human
 {
     public const int AMMO_MAX = 5;
     const float AMMO_RECHARGE_RATE = 1.2f;
-    int ammo;
+    public int ammo;
     float timeNextAmmoRecharge;
     public float ammoLaunchForce;
     Vector2 lastAimVec;
@@ -37,8 +37,6 @@ public class Player : Human
 
         if (Input.GetKeyDown(KeyCode.Space))
             Fire();
-
-        HUD.instance.setAmmo(ammo);
     }
 
     void Fire()

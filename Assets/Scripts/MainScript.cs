@@ -17,6 +17,8 @@ public class MainScript : MonoBehaviour
         instance = this;
         PlayerManager.Instance.Initialize(); 
         UnitManager.Instance.Initialize();
+        HUDManager.Instance.Initialise();
+
         wallColliders.geometryType = CompositeCollider2D.GeometryType.Outlines; //starts as poly for cast reasons
     }
 
@@ -30,6 +32,7 @@ public class MainScript : MonoBehaviour
     {
         PlayerManager.Instance.Update();
         UnitManager.Instance.Update();
+        HUDManager.Instance.Update();
     }
 
     public void FixedUpdate()

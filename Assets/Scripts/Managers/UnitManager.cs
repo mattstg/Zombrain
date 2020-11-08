@@ -60,9 +60,6 @@ public class UnitManager
             zombies[i].UpdateUnit();
         for (int i = humans.Count - 1; i >= 0; i--)
             humans[i].UpdateUnit();
-
-        HUD.instance.SetHumanText(humans.Count);
-        HUD.instance.SetZombieText(zombies.Count);
     }
 
     public void FixedUpdate()
@@ -71,9 +68,6 @@ public class UnitManager
             zombies[i].FixedUpdateUnit();
         for (int i = humans.Count - 1; i >= 0; i--)
             humans[i].FixedUpdateUnit();
-
-        HUD.instance.SetHumanText(humans.Count);
-        HUD.instance.SetZombieText(zombies.Count);
     }
 
     public void ConvertHuman(Human toConvert)
