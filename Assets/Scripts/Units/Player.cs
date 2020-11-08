@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : Human
 {
-    const int AMMO_MAX = 5;
+    public const int AMMO_MAX = 5;
     const float AMMO_RECHARGE_RATE = 1.2f;
     int ammo;
     float timeNextAmmoRecharge;
@@ -37,12 +37,12 @@ public class Player : Human
 
         if (Input.GetKeyDown(KeyCode.Space))
             Fire();
-        
+
+        HUD.instance.setAmmo(ammo);
     }
 
     void Fire()
     {
-        
         if (ammo == AMMO_MAX)
             timeNextAmmoRecharge = Time.time + AMMO_RECHARGE_RATE;
         if(ammo > 0)
