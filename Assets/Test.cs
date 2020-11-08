@@ -22,7 +22,7 @@ public class Test : MonoBehaviour
     1) How and where is the animations for the different unit types controlled, both in code and editor? 
     For example, there is no animation code in Player, yet it has different animations than Zombie
     
-        Code side Animation is handled in the function UpdateAnimator() of Unit.cs which UnitManager.cs and PlayerManager.cs call using the function UpdateUnit() 
+        Code side Animation are handled in the function UpdateAnimator() of Unit.cs which UnitManager.cs and PlayerManager.cs call using the function UpdateUnit() 
         Editor Animations are stored in Assets/Resources/Animations and are controlled by there repsective animation controller Player and Zombie
     
 
