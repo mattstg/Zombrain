@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 22428175}
   - component: {fileID: 22428177}
   - component: {fileID: 22428176}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Decorations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5105,7 +5105,7 @@ GameObject:
   - component: {fileID: 1859675683}
   - component: {fileID: 1859675685}
   - component: {fileID: 1859675684}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -7,11 +7,11 @@ public class Zombie : AIUnit
     protected override float detectionRange => 6;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Human"))
+        if (collision.gameObject.CompareTag("Human"))
         {
             collision.gameObject.GetComponent<Human>().Infect();
         }
-        else if(collision.gameObject.CompareTag("Player"))
+        else if (collision.gameObject.CompareTag("Player"))
         {
             PlayerManager.Instance.PlayerDied(collision.gameObject.GetComponent<Player>());
         }
@@ -19,7 +19,7 @@ public class Zombie : AIUnit
 
     protected override bool FindClosestTarget(out Vector2 targetPos)
     {
-        Human z = UnitManager.Instance.GetClosestHumanToPoint(transform.position,true);
+        Human z = UnitManager.Instance.GetClosestHumanToPoint(transform.position, true);
         if (z)
         {
             targetPos = z.transform.position;

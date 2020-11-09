@@ -30,7 +30,7 @@ public class UnitManager
     Transform zombieParent;
     Transform humanParent;
 
-    int numberOfHumansToSpawn = 85;
+    int numberOfHumansToSpawn = 100;
     int numberOfZombiesToSpawn = 5;
 
     float percentInfected = .2f;  //this could scale with level or something
@@ -109,12 +109,11 @@ public class UnitManager
     {
         Bounds wbounds = MainScript.instance.worldBounds.bounds;
 
-
         for (int i = 0; i < VALIDSPOT_ATTEMPTS_MAX; i++)
         {
             Vector2 spotInMap = new Vector2(Random.Range(-wbounds.extents.x, wbounds.extents.x), Random.Range(-wbounds.extents.y, wbounds.extents.y)) + (Vector2)wbounds.center;
 
-            if (!Physics2D.OverlapCapsule(spotInMap, new Vector2(2, 2), CapsuleDirection2D.Vertical, 0, LayerMask.GetMask("Unit")))
+            if (!Physics2D.OverlapCapsule(spotInMap, new Vector2(2, 2), CapsuleDirection2D.Vertical, 0, LayerMask.GetMask("Ground")))
             {
                 validSpot = spotInMap;
                 return true;
