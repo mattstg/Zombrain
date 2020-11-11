@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Destructible2D;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,7 +26,7 @@ public class UIManager
     GameObject fishHudPanel;
     GameObject fishAmmoPanelPrefab;
     GameObject fishAmmoPanelClone;
-
+    List<GameObject> ammoList;
 
     public void Initialize()
     {
@@ -33,19 +34,33 @@ public class UIManager
         zombiesCount = GameObject.Find("ZombiesText").GetComponent<Text>();
         fishHudPanel = GameObject.Find("FishHUDPanel");
         fishAmmoPanelPrefab = Resources.Load<GameObject>("Prefabs/UI/FishAmmoPanel");
-
-
+        ammoList = new List<GameObject>();
     }
 
     public void Update()
     {
         humansCount.text = "Humans: " + UnitManager.Instance.humans.Count;
         zombiesCount.text = "Zombies: " + UnitManager.Instance.zombies.Count;
+    }
 
+    public void AddAmmo()
+    {
+        fishAmmoPanelClone = new GameObject();
+        fishAmmoPanelClone = GameObject.Instantiate(fishAmmoPanelPrefab);
+        fishAmmoPanelClone.transform.SetParent(fishHudPanel.transform, false);
+        //ammoList.Add(fishAmmoPanelClone);
 
-        /*fishAmmoPanelClone = GameObject.Instantiate(fishAmmoPanelPrefab);
-        fishAmmoPanelClone.transform.SetParent(fishHudPanel.transform, false);*/
+    }
 
+    public void RemoveAmmoUI()
+    {
+        ammoList.Remove(fishAmmoPanelClone);
+        //GameObject.Destroy(fishAmmoPanelClone);
+    }
+
+    public void RefreshUI(int ammo)
+    {
+  
 
     }
 

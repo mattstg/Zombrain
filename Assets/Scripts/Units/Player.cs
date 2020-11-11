@@ -37,7 +37,7 @@ public class Player : Human
 
         if (Input.GetKeyDown(KeyCode.Space))
             Fire();
-        
+
     }
 
     void Fire()
@@ -47,11 +47,10 @@ public class Player : Human
         if(ammo > 0)
         {
             GameObject go = GameObject.Instantiate(ammoResource);
+            
             go.transform.position = transform.position;
             go.GetComponent<Rigidbody2D>().AddForce(lastAimVec.normalized * ammoLaunchForce, ForceMode2D.Impulse);
             ammo--;
         }
     }
-
-
 }
