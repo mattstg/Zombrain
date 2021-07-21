@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Human
+public class Player : Unit
 {
     const int AMMO_MAX = 5;
     const float AMMO_RECHARGE_RATE = 1.2f;

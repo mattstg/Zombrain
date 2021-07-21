@@ -125,16 +125,23 @@ public class UnitManager
     }
 
     #region GetClosestHardCoded
-    public Human GetClosestHumanToPoint(Vector2 pt, bool includePlayer)
+    public Unit GetClosestHumanToPoint(Vector2 pt, bool includePlayer)
     {
-        Human closestHuman = null;
+        Unit closestHuman = null;
         float closestDistance = float.MaxValue;
         float distance = 0; //reuse var to keep stack memory lightweight
-        List<Human> humansToCheck = new List<Human>(humans);
-        if (includePlayer)
-            humansToCheck.AddRange(PlayerManager.Instance.players);
+        List<Unit> positionOfHumans = new List<Unit>();
 
-        foreach(Human h in humansToCheck)
+        foreach(Unit h in humans)
+        {
+            positionOfHumans.Add(h);
+        }
+
+
+        if (includePlayer)
+            positionOfHumans.AddRange(PlayerManager.Instance.players);
+
+        foreach(Unit h in positionOfHumans)
         {
             distance = Vector2.SqrMagnitude((Vector2)h.transform.position - pt);
             if(distance < closestDistance)

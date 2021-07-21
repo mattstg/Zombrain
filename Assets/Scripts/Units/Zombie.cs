@@ -19,10 +19,10 @@ public class Zombie : AIUnit
 
     protected override bool FindClosestTarget(out Vector2 targetPos)
     {
-        Human z = UnitManager.Instance.GetClosestHumanToPoint(transform.position,true);
-        if (z)
+        Unit closestHumanOrPlayerToPoint = UnitManager.Instance.GetClosestHumanToPoint(transform.position,true);
+        if (closestHumanOrPlayerToPoint) //if it is not null
         {
-            targetPos = z.transform.position;
+            targetPos = closestHumanOrPlayerToPoint.transform.position;
             return true;
         }
         else

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Since this is not a mono, other classes need to call it's update
+//this class could be made to handle multiple players at once, hence why there is a list, however in this prototype, there is only one player
 public class PlayerManager
 {
     #region Singleton

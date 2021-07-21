@@ -5,6 +5,8 @@ using UnityEngine;
 public class Test : MonoBehaviour
 {
     /*
+      The game is on the SampleScene scene.
+     
 
     Bug/Balance Fixes
     //Fix the following issues in the game
