@@ -29,7 +29,7 @@ public class Test : MonoBehaviour
     New Features
     -Make A HUD that shows the amount of ammo by showing pictures of ammo in a Horizontal layout group
     -Make the HUD showcase the number of humans and zombies as text
-
+    -Make a text appear that says "Gameover" and destroy the player. Then zoom out to show more of the map
 
 
 
