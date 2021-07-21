@@ -8,12 +8,11 @@ public class UIManager : MonoBehaviour
     public Text zombieCountText;
     public Text humanCountText;
 
-    Transform gridLayoutParent;
+    public Transform gridLayoutParent;
     GameObject fishUIResource;
 
     public void InitializeUI(int initialAmmo)
     {
-        gridLayoutParent = MainScript.instance.ammoHudParent;
         fishUIResource = Resources.Load<GameObject>("Prefabs/FishAmmoUI");
         //bool b = fishUIResource == null;
         //Debug.Log("b:" + b);

@@ -11,7 +11,7 @@ public class MainScript : MonoBehaviour
     public Collider2D worldBounds;
     public CompositeCollider2D wallColliders;
     public Cinemachine.CinemachineVirtualCamera vcam;
-    public Transform ammoHudParent;
+   
 
     public void Awake()
     {
