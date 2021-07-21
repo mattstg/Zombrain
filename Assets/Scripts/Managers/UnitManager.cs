@@ -30,12 +30,15 @@ public class UnitManager
     Transform zombieParent;
     Transform humanParent;
 
-    int numberOfHumansToSpawn = 85;
+    int numberOfHumansToSpawn = 100;
     int numberOfZombiesToSpawn = 5;
+
+    UIManager uiManager;
 
     float percentInfected = .2f;  //this could scale with level or something
     public void Initialize()
     {
+        uiManager = GameObject.FindObjectOfType<UIManager>();
         zombies = new List<Zombie>();
         humans = new List<Human>();
         zombieParent = new GameObject("Zombie Parent").transform;
@@ -68,6 +71,7 @@ public class UnitManager
             zombies[i].FixedUpdateUnit();
         for (int i = humans.Count - 1; i >= 0; i--)
             humans[i].FixedUpdateUnit();
+        uiManager.UpdateCounts(humans.Count, zombies.Count);
     }
 
     public void ConvertHuman(Human toConvert)
@@ -114,7 +118,7 @@ public class UnitManager
         {
             Vector2 spotInMap = new Vector2(Random.Range(-wbounds.extents.x, wbounds.extents.x), Random.Range(-wbounds.extents.y, wbounds.extents.y)) + (Vector2)wbounds.center;
 
-            if (!Physics2D.OverlapCapsule(spotInMap, new Vector2(2, 2), CapsuleDirection2D.Vertical, 0, LayerMask.GetMask("Unit")))
+            if (!Physics2D.OverlapCapsule(spotInMap, new Vector2(2, 2), CapsuleDirection2D.Vertical, 0, LayerMask.GetMask("Unit","Ground")))
             {
                 validSpot = spotInMap;
                 return true;

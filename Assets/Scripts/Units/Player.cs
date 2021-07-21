@@ -12,12 +12,15 @@ public class Player : Unit
     Vector2 lastAimVec;
 
     GameObject ammoResource;
+    UIManager uiManager;
     public override void InitializeUnit()
     {
         base.InitializeUnit();
         ammo = AMMO_MAX;
         ammoResource = Resources.Load<GameObject>("Prefabs/Ammo");
         lastAimVec = -Vector2.up;
+        uiManager = GameObject.FindObjectOfType<UIManager>();
+        uiManager.InitializeUI(ammo);
     }
     protected override Vector2 GetMoveDir()
     {
@@ -31,7 +34,8 @@ public class Player : Unit
         base.UpdateUnit();
         if(Time.time > timeNextAmmoRecharge)
         {
-            ammo = Mathf.Min(ammo + 1, AMMO_MAX);
+            ModAmmo(1);
+            //ammo = Mathf.Min(ammo + 1, AMMO_MAX);
             timeNextAmmoRecharge = Time.time + AMMO_RECHARGE_RATE;
         }
 
@@ -50,7 +54,15 @@ public class Player : Unit
             GameObject go = GameObject.Instantiate(ammoResource);
             go.transform.position = transform.position;
             go.GetComponent<Rigidbody2D>().AddForce(lastAimVec.normalized * ammoLaunchForce, ForceMode2D.Impulse);
-            ammo--;
+            ModAmmo(-1);
         }
+    }
+
+    private void ModAmmo(int modBy)
+    {
+        int originalAmmo = ammo;  
+        ammo = Mathf.Clamp(ammo + modBy, 0, AMMO_MAX);  
+        uiManager.ModifyAmmoCount(ammo - originalAmmo);
+        //modify UI
     }
 }
