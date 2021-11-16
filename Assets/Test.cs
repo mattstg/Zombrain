@@ -6,39 +6,23 @@ public class Test : MonoBehaviour
 {
     /*
       The game is on the SampleScene scene.
-     
 
-    Bug/Balance Fixes
+    Bug/Balance Fixes (40%)
     //Fix the following issues in the game
-    1) The walls are invisible, make them visible again
+    1) The walls are not visible for some reason. Fix it so they are visible again
     2) Everything is shoved outside the screen when the game starts, fix that issue.
-    3) Bullets do not seem to affect zombies
-    4) The code that stops zombies and humans from spawning in walls seems to be bugged
-    5) Set number of humans to spawn to 100
-   
+    3) Set number of humans to spawn to 100
+    4) Bullets do not seem to affect zombies  (Do this question last)
 
-    Research
+    Research (30%)
     //Awnser the following questions with enough detail to explain to someone who hasn't seen the game or code yet
-    1) How and where is the animations for the different unit types controlled, both in code and editor? 
-        For example, there is no animation code in Player, yet it has different animations than Zombie
-    2) Explain the flow of the movement system of the Humans? At what point does the movement calculation differ from Zombies?
-    3) Who has a further detection range Humans or Zombies?
-    4) How do zombies pick thier targets to follow?
-    5) Explain the use of the out keyword and bool return type in FindClosestTarget. Why do you assume that design was used?
+    1) Who has a further detection range Humans or Zombies?
+    2) How do zombies pick thier targets to follow?
+    3) When zombies are placed, they do not overlap the walls or existing zombies. How?
     
-    New Features
+    New Features (30%)
     -Make A HUD that shows the amount of ammo by showing pictures of ammo in a Horizontal layout group
-    -Make the HUD showcase the number of humans and zombies as text
-    -Make a text appear that says "Gameover" and destroy the player. Then zoom out to show more of the map
-
-
-
-
-
-
-
-
-
+    
 
 
 
