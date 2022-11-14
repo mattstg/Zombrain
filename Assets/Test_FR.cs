@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test : MonoBehaviour
+public class Test_FR : MonoBehaviour
 {
     /*
       The game is on the SampleScene scene.

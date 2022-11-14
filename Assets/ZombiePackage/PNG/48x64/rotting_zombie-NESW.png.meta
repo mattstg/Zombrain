@@ -60,6 +60,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -68,9 +69,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -91,6 +92,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -398,6 +401,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      rotting_zombie-NESW_10: -497743393431344177
+      rotting_zombie-NESW_3: 5964646282770105989
+      rotting_zombie-NESW_8: 6369691342031681438
+      rotting_zombie-NESW_7: -2138578394551440737
+      rotting_zombie-NESW_11: 1742932069173031516
+      rotting_zombie-NESW_4: -5649622717457209181
+      rotting_zombie-NESW_1: 4521889571788888240
+      rotting_zombie-NESW_6: 8290254327802624413
+      rotting_zombie-NESW_5: 5692090373823950278
+      rotting_zombie-NESW_9: 8314647734618082838
+      rotting_zombie-NESW_0: -7510338279760796610
+      rotting_zombie-NESW_2: 2641344989175647242
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

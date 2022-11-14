@@ -260,7 +260,7 @@ namespace Destructible2D
 
 				if (alphaTex.format != format)
 				{
-					alphaTex.Resize(alphaWidth, alphaHeight, format, false);
+					alphaTex.Reinitialize(alphaWidth, alphaHeight, format, false);
 				}
 			}
 		}
@@ -274,7 +274,7 @@ namespace Destructible2D
 
 				if (alphaTex.width != alphaWidth || alphaTex.height != alphaHeight || alphaTex.format != format)
 				{
-					alphaTex.Resize(alphaWidth, alphaHeight, format, false);
+					alphaTex.Reinitialize(alphaWidth, alphaHeight, format, false);
 				}
 
 				alphaTex.SetPixels32(alphaData);

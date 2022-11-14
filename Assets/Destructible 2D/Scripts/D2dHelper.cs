@@ -143,7 +143,7 @@ namespace Destructible2D
 			}
 			else if (tempTexture2D.width != w || tempTexture2D.height != h)
 			{
-				tempTexture2D.Resize(w, h, TextureFormat.ARGB32, false);
+				tempTexture2D.Reinitialize(w, h, TextureFormat.ARGB32, false);
 			}
 		}
 
