@@ -22,9 +22,9 @@ public class Test : MonoBehaviour
     0) I don't see a ZombieManager and a HumanManager, so in what class are they managed?
     1) Who has a further detection range Humans or Zombies?
     2) How do zombies pick thier targets to follow?
-    3) When zombies are placed, they do not overlap the walls or existing zombies. How?
+    3) When zombies are placed, they are not placed ontop of existing objects. Where is this code, What is it doing?
     4) The virtual camera in the scene does not have a "follow" target set. However when the game is running, the camera is following the player. Where does the camera get set to follow the player?
-    5) Where is the code for the brain turning the zombie back into a human?
+    5) Where is the code for the fish food turning the zombie back into a human? What happens when a zombie is transformed into a human?
 
     
     New Features (30%)
